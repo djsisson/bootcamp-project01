@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: Arial;
+  
 }
 body {
   overflow: hidden;
@@ -43,6 +44,9 @@ li:hover {
   border-bottom: 5px red solid;
   cursor: pointer;
 }
+li[active="true"]{
+    border-bottom: 5px red solid;
+}
 #char-stars {
   font-size: 200%;
   color: yellow;
@@ -66,22 +70,24 @@ section {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  display: flex;
+  padding-top: 200px;
 }
 
 #Mondstadt-section {
-  background-image: url("./Assets/mondstadt.jpg");
+  background-image: url("./assets/backgrounds/mondstadt.jpg");
 }
 #Liyue-section {
-  background-image: url("./Assets/Liyue.jpg");
+  background-image: url("./assets/backgrounds/liyue.jpg");
 }
 #Inazuma-section {
-  background-image: url("./Assets/Inazuma.jpg");
+  background-image: url("./assets/backgrounds/inazuma.jpg");
 }
 #Sumeru-section {
-  background-image: url("./Assets/Sumeru.jpg");
+  background-image: url("./assets/backgrounds/sumeru.jpg");
 }
 #Fontaine-section {
-  background-image: url("./Assets/Fontaine.jpg");
+  background-image: url("./assets/backgrounds/fontaine.jpg");
 }
 footer {
   position: fixed;
@@ -119,4 +125,66 @@ footer > div {
   to {
     background-position: 450px;
   }
+}
+
+[id *= "characters"]{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: flex-start;
+    column-gap: 50px;
+}
+
+#Mondstadt-icons > div{
+width: 100px;
+height: 100px;
+background-image: url("./assets/charactericon/albedo_icon.webp");
+background-size: cover;
+}
+
+div[id *= "icons"]
+{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 300px;
+    flex-shrink: 0;
+    row-gap: 20px;
+}
+
+div[id *= "portrait"]{
+    display: flex;
+    flex-direction: row;
+    row-gap: 50px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: space-between;
+}
+
+div[id *= "portrait"] > div[id *= "element"]{
+    background-image: url("./assets/element/element_geo.svg");
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+    padding-left: 50px;
+}
+
+#Mondstadt-image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-image: url("./assets/characterportrait/albedo_profile.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div[id *= "portrait"] > h2{
+    font-size: 80px; 
+    padding-left: 50px;
+    padding-top: 50px;
 }
