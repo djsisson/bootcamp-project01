@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+body {
+  overflow: hidden;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background: rgba(128, 128, 128, 0.4);
+  padding: 20px;
+  column-gap: 100px;
+}
+h1 {
+  margin-left: 20px;
+  font-size: 46px;
+  flex-shrink: 0;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  align-self: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+}
+ul {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+  column-gap: 50px;
+}
+li {
+  padding: 10px;
+  border-bottom: 5px solid rgba(0, 0, 0, 0);
+}
+li:hover {
+  border-bottom: 5px red solid;
+  cursor: pointer;
+}
+#char-stars {
+  font-size: 200%;
+  color: yellow;
+}
+#char-stars + div {
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+}
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+a:visited {
+  text-decoration: none;
+}
+section {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#Mondstadt-section {
+  background-image: url("./Assets/mondstadt.jpg");
+}
+#Liyue-section {
+  background-image: url("./Assets/Liyue.jpg");
+}
+#Inazuma-section {
+  background-image: url("./Assets/Inazuma.jpg");
+}
+#Sumeru-section {
+  background-image: url("./Assets/Sumeru.jpg");
+}
+#Fontaine-section {
+  background-image: url("./Assets/Fontaine.jpg");
+}
+footer {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+}
+footer > div {
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(
+    135deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  background-size: 450px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbow-scroll 5s linear infinite;
+  text-align: right;
+  padding-right: 50px;
+  width: 100%;
+}
+
+@keyframes rainbow-scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 450px;
+  }
+}
