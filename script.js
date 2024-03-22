@@ -7,3 +7,8 @@ document.querySelectorAll("li").forEach((item) => {
     item.setAttribute("active","true");
   });
 });
+
+var allImages = document.getElementsByTagName("img");
+    for (element of allImages) { 
+        element.draggable = false;
+    }
