@@ -70,7 +70,6 @@ a:visited {
   text-decoration: none;
 }
 section {
-  width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -162,17 +161,42 @@ div[id*="icons"] > img {
   z-index: 15;
 }
 
-div[id*="icons"] > img:hover[active="false"] {
+.icon:hover[active="false"] {
   border: 3px solid white;
 }
 
-img[active="false"] {
-  border: solid rgba(0, 0, 0, 0);
+.icon[active="false"] {
+  border: 5px solid rgba(0, 0, 0, 0);
 }
 
-img[active="true"] {
-  border: 3px solid red;
+.icon[active="true"] {
+  border: 5px solid red;
 }
+
+.icon[active="true"][element="pyro"] {
+  border: 5px solid #ef7938;
+}
+
+.icon[active="true"][element="cryo"] {
+  border: 5px solid #9fd6e3;
+}
+
+.icon[active="true"][element="anemo"] {
+  border: 5px solid #74c2a8;
+}
+
+.icon[active="true"][element="dendro"] {
+  border: 5px solid #a5c83b;
+}
+
+.icon[active="true"][element="hydro"] {
+  border: 5px solid #4cc2f1;
+}
+
+.icon[active="true"][element="geo"] {
+  border: 5px solid #fab632;
+}
+
 
 div[id*="portrait"] {
   display: flex;
