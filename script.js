@@ -13,16 +13,33 @@ for (element of allImages) {
 
 window.addEventListener("resize", (event) => {
   scrollTo({
-    top: document.getElementById(document.querySelector("li[active='true']").getAttribute("jumpto")).offsetTop,
+    top: document.getElementById(
+      document.querySelector("li[active='true']").getAttribute("jumpto")
+    ).offsetTop,
     left: 0,
     behaviour: "instant",
   });
 });
 
-
 document.querySelectorAll(".icon").forEach((item) => {
   item.addEventListener("click", (event) => {
-    document.querySelector(`.icon[region='${item.getAttribute("region")}'][active=true]`).setAttribute("active", "false");
+    const region = item.getAttribute("region");
+    const portrait = "./assets/characterportrait/";
+    const charname = item.getAttribute("char");
+    const elementpath = "./assets/element/element_";
+    const element = item.getAttribute("element");
+    document
+      .querySelector(`.icon[region='${region}'][active=true]`)
+      .setAttribute("active", "false");
+    document
+      .getElementById(`${region}-image`)
+      .setAttribute("src", `${portrait}${charname}_profile.png`);
+    document
+      .getElementById(`${region}-element`)
+      .setAttribute("src", `${elementpath}${element}.svg`);
+
+    document.querySelector(`div[id = '${region}-profile'] > h2`).textContent =
+      item.getAttribute("alt");
     item.setAttribute("active", "true");
-  })
-})
+  });
+});
