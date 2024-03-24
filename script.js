@@ -47,3 +47,11 @@ document.querySelectorAll(".icon").forEach((item) => {
     item.setAttribute("active", "true");
   });
 });
+
+document.getElementById("darkmode").addEventListener("click", function (event) {
+  document.querySelectorAll(".dropdown-content > div").forEach((item) => {
+    item.classList.toggle("dark-mode");
+    console.log(item.nodeName);
+  });
+  console.log("test");
+});

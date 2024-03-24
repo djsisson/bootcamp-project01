@@ -14,9 +14,9 @@ header {
   top: 0;
   width: 100%;
   display: flex;
+  justify-content: space-between;
   background: rgba(128, 128, 128, 0.6);
   padding: 20px;
-  column-gap: 100px;
   z-index: 9;
 }
 h1 {
@@ -129,6 +129,7 @@ label:hover {
 #char-stars {
   font-size: 200%;
   color: yellow;
+  padding: 0 50px;
 }
 #char-stars + div {
   text-align: center;
@@ -246,35 +247,38 @@ div[id*="icons"] > img {
   border: 5px solid rgba(0, 0, 0, 0);
 }
 
-.icon[active="true"] {
-  border: 5px solid red;
-}
-
 .icon[active="true"][element="pyro"] {
+  background-image: conic-gradient(from 135deg, #ef7938, white, #ef7938);
   border: 5px solid #ef7938;
 }
 
 .icon[active="true"][element="cryo"] {
+  background-image: conic-gradient(from 135deg, #9fd6e3, white, #9fd6e3);
   border: 5px solid #9fd6e3;
 }
 
 .icon[active="true"][element="anemo"] {
+  background-image: conic-gradient(from 135deg, #74c2a8, white, #74c2a8);
   border: 5px solid #74c2a8;
 }
 
 .icon[active="true"][element="dendro"] {
+  background-image: conic-gradient(from 135deg, #a5c83b, white, #a5c83b);
   border: 5px solid #a5c83b;
 }
 
 .icon[active="true"][element="hydro"] {
+  background-image: conic-gradient(from 135deg, #4cc2f1, white, #4cc2f1);
   border: 5px solid #4cc2f1;
 }
 
 .icon[active="true"][element="geo"] {
+  background-image: conic-gradient(from 135deg, #fab632, white, #fab632);
   border: 5px solid #fab632;
 }
 
 .icon[active="true"][element="electro"] {
+  background-image: conic-gradient(from 135deg, #af8ec1, white, #af8ec1);
   border: 5px solid #af8ec1;
 }
 
@@ -411,7 +415,19 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+label {
+  background-color: rgba(0, 0, 0, 0);
+}
 
 #profiles {
   display: none;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white !important;
+}
+
+.dark-mode:hover {
+  background-color: rgb(98, 98, 98) !important;
 }
