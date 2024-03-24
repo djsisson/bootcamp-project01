@@ -16,7 +16,7 @@ header {
   display: flex;
   justify-content: space-between;
   background: rgba(128, 128, 128, 0.6);
-  padding: 20px;
+  padding: 10px;
   z-index: 9;
 }
 h1 {
@@ -40,7 +40,7 @@ ul {
 }
 li {
   display: inline-block;
-
+  padding-bottom: 5px;
   position: relative;
   margin: 0 15px;
 }
