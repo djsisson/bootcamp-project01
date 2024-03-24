@@ -40,6 +40,10 @@ document.querySelectorAll(".icon").forEach((item) => {
 
     document.querySelector(`div[id = '${region}-profile'] > h2`).textContent =
       item.getAttribute("alt");
+
+    document.querySelector(`div[id = '${region}-profile'] > div`).innerHTML =
+      document.getElementById(`${charname}-profile`).innerHTML;
+
     item.setAttribute("active", "true");
   });
 });
