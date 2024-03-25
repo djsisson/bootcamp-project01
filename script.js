@@ -41,8 +41,13 @@ document.querySelectorAll(".icon").forEach((item) => {
     document.querySelector(`div[id = '${region}-profile'] > h2`).textContent =
       item.getAttribute("alt");
 
-    document.querySelector(`div[id = '${region}-profile'] > div`).innerHTML =
-      document.getElementById(`${charname}-profile`).innerHTML;
+    let profiletext = document.querySelector(
+      `div[id = '${region}-profile'] > div`
+    );
+    profiletext.innerHTML = document.getElementById(
+      `${charname}-profile`
+    ).innerHTML;
+    profiletext.scrollTo(0, 0);
 
     item.setAttribute("active", "true");
   });
@@ -51,7 +56,5 @@ document.querySelectorAll(".icon").forEach((item) => {
 document.getElementById("darkmode").addEventListener("click", function (event) {
   document.querySelectorAll(".dropdown-content > div").forEach((item) => {
     item.classList.toggle("dark-mode");
-    console.log(item.nodeName);
   });
-  console.log("test");
 });

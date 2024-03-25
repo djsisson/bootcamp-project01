@@ -37,6 +37,7 @@ nav {
 ul {
   list-style-type: none;
   text-align: center;
+  position: relative;
 }
 li {
   display: inline-block;
@@ -231,20 +232,67 @@ div[id*="icons"] {
   z-index: 13;
 }
 
-div[id*="icons"] > img {
+.icon {
   border-radius: 50%;
   width: 100px;
   height: 100px;
   z-index: 15;
+  position: relative;
+  transition: border 0.3s;
+}
+
+.icon-container {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  z-index: 17;
+  position: relative;
+}
+
+.icon-container::after {
+  position: absolute;
+  content: " ";
+  inset: 0;
+  opacity: 0;
+  z-index: 13;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  transition: opacity 1s;
+}
+
+.icon-container:hover::after {
+  opacity: 1;
+}
+
+.icon-container:has(.icon[element="pyro"])::after {
+  background-image: conic-gradient(from 135deg, #ef7938, white, #ef7938);
+}
+.icon-container:has(.icon[element="cryo"])::after {
+  background-image: conic-gradient(from 135deg, #9fd6e3, white, #9fd6e3);
+}
+.icon-container:has(.icon[element="anemo"])::after {
+  background-image: conic-gradient(from 135deg, #74c2a8, white, #74c2a8);
+}
+.icon-container:has(.icon[element="dendro"])::after {
+  background-image: conic-gradient(from 135deg, #a5c83b, white, #a5c83b);
+}
+.icon-container:has(.icon[element="hydro"])::after {
+  background-image: conic-gradient(from 135deg, #4cc2f1, white, #4cc2f1);
+}
+.icon-container:has(.icon[element="geo"])::after {
+  background-image: conic-gradient(from 135deg, #fab632, white, #fab632);
+}
+.icon-container:has(.icon[element="electro"])::after {
+  background-image: conic-gradient(from 135deg, #af8ec1, white, #af8ec1);
 }
 
 .icon:hover[active="false"] {
-  border: 3px solid white;
   cursor: pointer;
 }
 
 .icon[active="false"] {
-  border: 5px solid rgba(0, 0, 0, 0);
+  border: 0px solid rgba(0, 0, 0, 0);
 }
 
 .icon[active="true"][element="pyro"] {
