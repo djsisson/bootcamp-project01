@@ -238,7 +238,7 @@ div[id*="icons"] {
   height: 100px;
   z-index: 15;
   position: relative;
-  transition: border 0.3s;
+  transition: border 0.3s ease;
 }
 
 .icon-container {
@@ -258,7 +258,7 @@ div[id*="icons"] {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  transition: opacity 1s;
+  transition: opacity 1s ease;
 }
 
 .icon-container:hover::after {

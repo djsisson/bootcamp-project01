@@ -6,7 +6,7 @@ document.querySelectorAll("li").forEach((item) => {
   });
 });
 
-var allImages = document.getElementsByTagName("img");
+let allImages = document.getElementsByTagName("img");
 for (element of allImages) {
   element.draggable = false;
 }
