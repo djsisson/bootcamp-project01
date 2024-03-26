@@ -261,30 +261,42 @@ div[id*="icons"] {
   transition: opacity 1s ease;
 }
 
+.icon-container::before {
+  position: absolute;
+  content: " ";
+  inset: 0;
+  opacity: 0;
+  z-index: 13;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  transition: opacity 1s ease;
+}
+
 .icon-container:hover::after {
   opacity: 1;
 }
 
 .icon-container:has(.icon[element="pyro"])::after {
-  background-image: conic-gradient(from 135deg, #ef7938, white, #ef7938);
+  background-image: conic-gradient(from 45deg, #ef7938, white, #ef7938);
 }
 .icon-container:has(.icon[element="cryo"])::after {
-  background-image: conic-gradient(from 135deg, #9fd6e3, white, #9fd6e3);
+  background-image: conic-gradient(from 45deg, #9fd6e3, white, #9fd6e3);
 }
 .icon-container:has(.icon[element="anemo"])::after {
-  background-image: conic-gradient(from 135deg, #74c2a8, white, #74c2a8);
+  background-image: conic-gradient(from 45deg, #74c2a8, white, #74c2a8);
 }
 .icon-container:has(.icon[element="dendro"])::after {
-  background-image: conic-gradient(from 135deg, #a5c83b, white, #a5c83b);
+  background-image: conic-gradient(from 45deg, #a5c83b, white, #a5c83b);
 }
 .icon-container:has(.icon[element="hydro"])::after {
-  background-image: conic-gradient(from 135deg, #4cc2f1, white, #4cc2f1);
+  background-image: conic-gradient(from 45deg, #4cc2f1, white, #4cc2f1);
 }
 .icon-container:has(.icon[element="geo"])::after {
-  background-image: conic-gradient(from 135deg, #fab632, white, #fab632);
+  background-image: conic-gradient(from 45deg, #fab632, white, #fab632);
 }
 .icon-container:has(.icon[element="electro"])::after {
-  background-image: conic-gradient(from 135deg, #af8ec1, white, #af8ec1);
+  background-image: conic-gradient(from 45deg, #af8ec1, white, #af8ec1);
 }
 
 .icon:hover[active="false"] {
@@ -296,37 +308,65 @@ div[id*="icons"] {
 }
 
 .icon[active="true"][element="pyro"] {
-  background-image: conic-gradient(from 135deg, #ef7938, white, #ef7938);
   border: 5px solid #ef7938;
 }
 
-.icon[active="true"][element="cryo"] {
+.icon-container:has(.icon[active="true"][element="pyro"])::before {
+  background-image: conic-gradient(from 135deg, #ef7938, white, #ef7938);
+  opacity: 1;
+}
+
+.icon-container:has(.icon[active="true"][element="cryo"])::before {
   background-image: conic-gradient(from 135deg, #9fd6e3, white, #9fd6e3);
+  opacity: 1;
+}
+
+.icon-container:has(.icon[active="true"][element="anemo"])::before {
+  background-image: conic-gradient(from 135deg, #74c2a8, white, #74c2a8);
+  opacity: 1;
+}
+
+.icon-container:has(.icon[active="true"][element="dendro"])::before {
+  background-image: conic-gradient(from 135deg, #a5c83b, white, #a5c83b);
+  opacity: 1;
+}
+
+.icon-container:has(.icon[active="true"][element="hydro"])::before {
+  background-image: conic-gradient(from 135deg, #4cc2f1, white, #4cc2f1);
+  opacity: 1;
+}
+
+.icon-container:has(.icon[active="true"][element="geo"])::before {
+  background-image: conic-gradient(from 135deg, #fab632, white, #fab632);
+  opacity: 1;
+}
+
+.icon-container:has(.icon[active="true"][element="electro"])::before {
+  background-image: conic-gradient(from 135deg, #af8ec1, white, #af8ec1);
+  opacity: 1;
+}
+
+.icon[active="true"][element="cryo"] {
   border: 5px solid #9fd6e3;
 }
 
 .icon[active="true"][element="anemo"] {
-  background-image: conic-gradient(from 135deg, #74c2a8, white, #74c2a8);
   border: 5px solid #74c2a8;
 }
 
 .icon[active="true"][element="dendro"] {
-  background-image: conic-gradient(from 135deg, #a5c83b, white, #a5c83b);
   border: 5px solid #a5c83b;
 }
 
 .icon[active="true"][element="hydro"] {
-  background-image: conic-gradient(from 135deg, #4cc2f1, white, #4cc2f1);
   border: 5px solid #4cc2f1;
 }
 
 .icon[active="true"][element="geo"] {
-  background-image: conic-gradient(from 135deg, #fab632, white, #fab632);
   border: 5px solid #fab632;
 }
 
 .icon[active="true"][element="electro"] {
-  background-image: conic-gradient(from 135deg, #af8ec1, white, #af8ec1);
   border: 5px solid #af8ec1;
 }
 
