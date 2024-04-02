@@ -1,6 +1,12 @@
 document.querySelectorAll("li").forEach((item) => {
   item.addEventListener("click", (event) => {
-    window.location.hash = item.getAttribute("jumpto");
+    let sectiontoupdate = item.getAttribute("jumpto");
+    let updateimg = document.getElementById(sectiontoupdate);
+    let updatedstring = sectiontoupdate
+      .slice(0, sectiontoupdate.length - 8)
+      .toLowerCase();
+    updateimg.style.backgroundImage = (`url('./assets/backgrounds/${updatedstring}.webp')`);
+    window.location.hash = sectiontoupdate;
     document.querySelector("li[active='true']").setAttribute("active", "false");
     item.setAttribute("active", "true");
   });

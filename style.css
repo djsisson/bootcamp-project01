@@ -6,6 +6,10 @@
   -webkit-user-select: none;
   user-select: none;
 }
+#Mondstadt-section {
+  background-image: url("./assets/backgrounds/mondstadt.webp");
+}
+
 body {
   overflow: hidden;
 }
@@ -156,21 +160,6 @@ section {
   position: relative;
 }
 
-#Mondstadt-section {
-  background-image: url("./assets/backgrounds/mondstadt.jpg");
-}
-#Liyue-section {
-  background-image: url("./assets/backgrounds/liyue.jpg");
-}
-#Inazuma-section {
-  background-image: url("./assets/backgrounds/inazuma.jpg");
-}
-#Sumeru-section {
-  background-image: url("./assets/backgrounds/sumeru.jpg");
-}
-#Fontaine-section {
-  background-image: url("./assets/backgrounds/fontaine.jpg");
-}
 footer {
   position: fixed;
   bottom: 20px;
